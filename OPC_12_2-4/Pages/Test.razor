@@ -1,0 +1,18 @@
+﻿@page "/Test"
+
+<h1>Test</h1>
+<p role="status">@greeting</p>
+
+<button class="btn btn-primary" @onclick="Hello">Hello</button>
+
+@code {
+    private string greeting = "";
+
+    private void Hello()
+    {
+        if (greeting == "")
+            greeting = "Hello";
+        else
+            greeting = "";
+    }
+}
